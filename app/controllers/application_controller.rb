@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
   
   def new_user_session
-      
+      redirect_to ENV['URL_APP'] + 'login'
   end
   
   def create_user_session
@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
       
   end
   
+  def signup_driver
+    redirect_to ENV['URL_APP'] + 'drivers/new'
+  end
+  
   def create_driver
       
   end
@@ -35,6 +39,10 @@ class ApplicationController < ActionController::Base
   
   def shipment_driver
       
+  end
+  
+  def admin_login
+    redirect_to ENV['URL_APP'] + 'admins/login'
   end
   
   

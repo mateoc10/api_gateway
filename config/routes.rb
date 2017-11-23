@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   # delete '/logout',  to: 'application#destroy_user_session'
   
   # resources :drivers
-  # get '/drivers/signup', to: 'drivers#new'
+  get '/drivers/signup', to: 'application#signup_driver'
   # post '/drivers/signup', to: 'drivers#create'
   # get 'drivers/shipment',  to: 'drivers#shipment'
   # post 'drivers/shipment',  to: 'drivers#end_shipment'
@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   
   # resources :admin
   # post '/admins/login', to: 'admins#login'
+  get '/admins/login', to: 'application#admin_login'
   # post 'approve', to: 'admins#approve'
   # post 'reject', to: 'admins#reject'
   # # get '/admins/create', to: 'admins#create'
