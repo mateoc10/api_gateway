@@ -5,45 +5,20 @@ class ApplicationController < ActionController::Base
      redirect_to ENV['URL_APP'] 
   end
   
-  def signup_user
-      redirect_to ENV['URL_APP'] + 'signup'
+  def shipment_details
+    
+    pp 'llego hasta aca shongo'
+    # conn = Faraday.new(url: ENV['URL_SHIPMENT'])
+    # resp = conn.get do |req|
+    #   req.url 'details'
+    #   req.params['body'] = params['body']
+    # end
+    
+    render json: 1
+    
   end
   
-  def new_user_session
-      redirect_to ENV['URL_APP'] + 'login'
-  end
   
-  def create_user_session
-      
-  end
-  
-  def destroy_user_session
-      
-  end 
-  
-  def new_driver
-      
-  end
-  
-  def signup_driver
-    redirect_to ENV['URL_APP'] + 'drivers/new'
-  end
-  
-  def create_driver
-      
-  end
-  
-  def end_shipment
-      
-  end
-  
-  def shipment_driver
-      
-  end
-  
-  def admin_login
-    redirect_to ENV['URL_APP'] + 'admins/login'
-  end
   
   
 end
